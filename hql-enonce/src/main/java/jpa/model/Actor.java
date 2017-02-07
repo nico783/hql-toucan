@@ -1,5 +1,6 @@
 package jpa.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,24 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Version;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
-
 @Entity
-public class Actor implements java.io.Serializable {
+public class Actor implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@GenericGenerator(strategy = "org.hibernate.id.enhanced.TableGenerator", name = "actorGen", parameters = {
-			@Parameter(name = "table_name", value = "ID_GENERATOR"),
-			@Parameter(name = "value_column_name", value = "GEN_VALUE"),
-			@Parameter(name = "segment_column_name", value = "GEN_ID"),
-			@Parameter(name = "segment_value", value = "ACTOR_ID"),
-			@Parameter(name = "increment_size", value = "50"),
-			@Parameter(name = "optimizer", value = "pooled") })
 	@Id
 	@Column(name = "id", unique = true, nullable = false)
-	@GeneratedValue(generator = "actorGen")
 	private Long id;
 
 	@ManyToMany(mappedBy = "actors")

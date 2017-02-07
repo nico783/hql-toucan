@@ -35,6 +35,3 @@ insert into MOVIE_ACTOR values (7, 9);
 insert into MOVIE_ACTOR values (7, 10);
 insert into MOVIE_ACTOR values (8, 4);
 insert into MOVIE_ACTOR values (9, 9);
-
-insert into ID_GENERATOR (GEN_ID, GEN_VALUE) select 'MOVIE_ID', max(ID) + 1 from MOVIE;
-insert into ID_GENERATOR (GEN_ID, GEN_VALUE) select 'ACTOR_ID', max(ID) + 1 from ACTOR;
