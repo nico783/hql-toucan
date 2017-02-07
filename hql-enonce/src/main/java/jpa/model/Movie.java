@@ -1,7 +1,6 @@
 package jpa.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class Movie implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@ManyToMany
-	private List<Actor> actors = new ArrayList<Actor>();
+	private List<Actor> actors;
 
 	@Id
 	private Long id;

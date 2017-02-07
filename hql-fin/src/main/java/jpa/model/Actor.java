@@ -1,7 +1,6 @@
 package jpa.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -19,7 +18,7 @@ public class Actor implements Serializable {
 	private Long id;
 
 	@ManyToMany(mappedBy = "actors")
-	private List<Movie> movies = new ArrayList<Movie>();
+	private List<Movie> movies;
 
 	@Column(nullable = false, length = 50)
 	private String name;
