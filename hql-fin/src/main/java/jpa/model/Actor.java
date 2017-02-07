@@ -16,7 +16,6 @@ public class Actor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name = "id", unique = true, nullable = false)
 	private Long id;
 
 	@ManyToMany(mappedBy = "actors")

@@ -22,7 +22,6 @@ public class Movie implements Serializable {
 	private List<Actor> actors = new ArrayList<Actor>();
 
 	@Id
-	@Column(name = "id", unique = true, nullable = false)
 	private Long id;
 
 	@Column(nullable = false, length = 50)
