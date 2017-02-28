@@ -33,6 +33,7 @@ public class QueriesTest {
 
 		// 10 acteurs dans la base
 		Assert.assertEquals(10, actors.size());
+		Assert.assertEquals("Al Pacino", actors.get(0).getName());
 	}
 
 	/**
